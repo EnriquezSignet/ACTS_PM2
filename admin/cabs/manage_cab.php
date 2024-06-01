@@ -18,7 +18,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 </style>
 <div class="card card-outline card-purple rounded-0">
 	<div class="card-header">
-		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Cab</h3>
+		<h3 class="card-title"><?php echo isset($id) ? "Update ": "List New " ?> Service Provider</h3>
 	</div>
 	<div class="card-body">
 		<form action="" id="cab-form">
@@ -36,7 +36,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </select>
 			</div>
 			<div class="form-group">
-				<label for="cab_reg_no" class="control-label">Registration Code</label>
+				<label for="cab_reg_no" class="control-label">Identification Number</label>
                 <input name="cab_reg_no" id="cab_reg_no" type="text" class="form-control rounded-0" value="<?php echo isset($cab_reg_no) ? $cab_reg_no : ''; ?>" required>
 			</div>
 			<div class="form-group">

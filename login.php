@@ -28,6 +28,7 @@
         alert_toast("<?php echo $_settings->flashdata('success') ?>",'success')
       </script>
     <?php endif;?>
+
   <!-- /.login-logo -->
   <center><img src="<?= validate_image($_settings->info('logo')) ?>" alt="System Logo" id="logo-img"></center>
   <div class="clear-fix my-2"></div>

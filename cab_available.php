@@ -1,12 +1,3 @@
- <!-- Header-->
- <header class="bg-dark py-5" id="main-header">
-    <div class="container h-100 d-flex align-items-center justify-content-center w-100">
-        <div class="text-center text-white w-100">
-        <h1 class="display-4 fw-bolder">Available Services</h1>
-            <p class="lead fw-normal text-white-50 mb-0">We will take care of your vehicle</p>
-        </div>
-    </div>
-</header> 
 <!-- Section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5 card rounded-0 card-outline card-purple shadow">
@@ -43,7 +34,7 @@
                     </a>
                     <?php endwhile; ?>
                 </div>
-                <div id="noResult" style="display:none" class="text-center"><b>No Results!!</b></div>
+                <div id="noResult" style="display:none" class="text-center"><b>No Results</b></div>
             </div>
         </div>
     </div>

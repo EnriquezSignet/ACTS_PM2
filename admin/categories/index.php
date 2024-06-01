@@ -15,10 +15,10 @@
 			<table class="table table-bordered table-stripped table-hover">
 				<colgroup>
 					<col width="5%">
-					<col width="15%">
-					<col width="30%">
 					<col width="10%">
-					<col width="15%">
+					<col width="35%">
+					<col width="10%">
+					<col width="10%">
 				</colgroup>
 				<thead>
 				<tr class="bg-gradient-dark text-light">

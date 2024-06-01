@@ -3,12 +3,10 @@
     <div class="container h-100 d-flex align-items-center justify-content-center w-100">
         <div class="text-center text-white w-100">
             <h1 class="display-4 fw-bolder mx-5"><?php echo $_settings->info('name') ?></h1>
-            <div class="col-auto mt-4">
-                <!-- <a class="btn btn-warning btn-lg rounded-0" href="./?p=booking">Book Now</a> -->
-            </div>
         </div>
     </div>
 </header>
+
 <!-- Section-->
 <section class="py-5">
     <div class="container">

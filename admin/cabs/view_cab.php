@@ -33,10 +33,11 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                         <img src="<?= validate_image(isset($image_path) ? $image_path : "") ?>" alt="cab Image <?= isset($name) ? $name : "" ?>" class="img-thumbnail cab-img">
                     </div>
                 </div>
+
                 <div class="row">
                     <legend class="h4 text-muted"><b>Service Provider Details</b></legend>
                     <div class="col-md-6">
-                        <small class="mx-2 text-muted">Registeration Code</small>
+                        <small class="mx-2 text-muted">Identification Number</small>
                         <div class="pl-4"><?= isset($reg_code) ? $reg_code : '' ?></div>
                     </div>
                     <div class="col-md-6">
@@ -44,20 +45,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                         <div class="pl-4"><?= isset($category) ? $category : '' ?></div>
                     </div>
                 </div>
-                <fieldset>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <small class="mx-2 text-muted">Services</small>
-                            <div class="pl-4"><?= isset($cab_model) ? $cab_model : '' ?></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <small class="mx-2 text-muted">Service Code</small>
-                            <div class="pl-4"><?= isset($body_no) ? $body_no : '' ?></div>
-                        </div>
-                    </div>
-                </fieldset>
+
                 <fieldset>
                     <div class="row">
                         <div class="col-md-6">
@@ -65,17 +53,35 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                             <div class="pl-4"><?= isset($cab_driver) ? $cab_driver : '' ?></div>
                         </div>
                         <div class="col-md-6">
+                            <small class="mx-2 text-muted">Services</small>
+                            <div class="pl-4"><?= isset($cab_model) ? $cab_model : '' ?></div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small class="mx-2 text-muted">Home Address</small>
+                            <div class="pl-4"><?= isset($driver_address) ? $driver_address : '' ?></div>
+                        </div>
+                        <div class="col-md-6">
+                            <small class="mx-2 text-muted">Service Code</small>
+                            <div class="pl-4"><?= isset($body_no) ? $body_no : '' ?></div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
                             <small class="mx-2 text-muted">Contact Number</small>
                             <div class="pl-4"><?= isset($driver_contact) ? $driver_contact : '' ?></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <small class="mx-2 text-muted">Address</small>
-                            <div class="pl-4"><?= isset($driver_address) ? $driver_address : '' ?></div>
-                        </div>
-                    </div>
                 </fieldset>
+
                 <div class="row">
                     <div class="col-md-12">
                         <small class="mx-2 text-muted">Status</small>

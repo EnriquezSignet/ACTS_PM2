@@ -18,7 +18,7 @@
                         <li class="nav-item"><a class="nav-link <?= isset($page) && $page == 'home'? "active" : '' ?>" aria-current="page" href="./">Home</a></li>
                         <li class="nav-item"><a class="nav-link <?= isset($page) && $page == 'about'? "active" : '' ?>" href="./?p=about">About Us</a></li>
                         <li class="nav-item"><a class="nav-link <?= isset($page) && $page == 'contact'? "active" : '' ?>" href="./?p=contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link <?= isset($page) && $page == 'cab_available'? "active" : '' ?>" href="./?p=cab_available">Available Cabs</a></li>
+                        <li class="nav-item"><a class="nav-link <?= isset($page) && $page == 'cab_available'? "active" : '' ?>" href="./?p=cab_available">Available Services</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                     </div>
@@ -40,7 +40,7 @@
                   <?php else: ?>
                     <a href="./login.php" class="text-reset text-decoration-none mx-2"><b>Login</b></a> 
                     <a href="./register.php" class="text-reset text-decoration-none mx-2"><b>Register</b></a>
-                    <a href="./driver/login.php" class="text-reset text-decoration-none mx-2"><b>Driver Panel</b></a>
+                    <a href="./driver/login.php" class="text-reset text-decoration-none mx-2"><b>Service Provider Panel</b></a>
                     <!-- <a href="./admin/login.php" class="text-reset text-decoration-none mx-2"><b>Admin</b></a> -->
                   <?php endif; ?>
                 </div>

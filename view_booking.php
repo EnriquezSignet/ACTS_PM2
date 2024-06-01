@@ -30,10 +30,6 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 <dl>
                     <dt class="">Registration Code</dt>
                     <dd class="pl-4"><?= isset($body_no) ? $reg_code : "" ?></dd>
-                    <dt class="">Category</dt>
-                    <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
-                    <!-- <dt class="">Vehicle model</dt>
-                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd> -->
                     <dt class="">Service Provider Name</dt>
                     <dd class="pl-4"><?= isset($cab_driver) ? $cab_driver : "" ?></dd>
                     <dt class="">Contact Number</dt>
@@ -52,6 +48,10 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 <dl>
                     <dt class="">Transaction Code</dt>
                     <dd class="pl-4"><?= isset($ref_code) ? $ref_code : "" ?></dd>
+                    <dt class="">Category</dt>
+                    <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
+                    <dt class="">Service</dt>
+                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd>
                     <dt class="">Address</dt>
                     <dd class="pl-4"><?= isset($pickup_zone) ? $pickup_zone : "" ?></dd>
                     <dt class="">Notes</dt>

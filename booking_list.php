@@ -18,7 +18,7 @@
                         <tr class="bg-gradient-dark text-light">
                             <th class="text-center">#</th>
                             <th class="text-center">Date Booked</th>
-                            <th class="text-center">Ref. Code</th>
+                            <th class="text-center">Transaction Code</th>
                             <th class="text-center">Details</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>

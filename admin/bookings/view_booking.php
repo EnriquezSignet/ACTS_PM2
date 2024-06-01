@@ -27,12 +27,8 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             <fieldset class="border-bottom">
             <legend class="h5 text-muted">Service Provider</legend>
             <dl>
-                <dt class="">Registration Code</dt>
-                <dd class="pl-4"><?= isset($body_no) ? $reg_code : "" ?></dd> 
-                <dt class="">Category</dt>
-                <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
-                <!--<dt class="">Vehicle model</dt>
-                <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd> -->
+                <dt class="">Identification Number</dt>
+                <dd class="pl-4"><?= isset($body_no) ? $reg_code : "" ?></dd>  
                 <dt class="">Service Provider Name</dt>
                 <dd class="pl-4"><?= isset($cab_driver) ? $cab_driver : "" ?></dd>
                 <dt class="">Contact Number</dt>
@@ -42,13 +38,16 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             </dl>
         </fieldset>
         </div>
-        <!-- <div class="clear-fix my-2"></div> -->
         <div class="col-md-6">
             <fieldset class="bor">
                 <legend class="h5 text-muted"> Booking Details</legend>
                 <dl>
                     <dt class="">Transaction Code</dt>
                     <dd class="pl-4"><?= isset($ref_code) ? $ref_code : "" ?></dd>
+                    <dt class="">Category</dt>
+                    <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
+                    <dt class="">Service</dt>
+                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd>
                     <dt class="">Client</dt>
                     <dd class="pl-4"><?= isset($client) ? $client : "" ?></dd>
                     <dt class="">Address</dt>

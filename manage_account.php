@@ -27,7 +27,7 @@ if($_settings->userdata('id') > 0 && $_settings->userdata('login_type') == 2){
     <div class="container">
         <div class="card card-outline card-purple shadow rounded-0">
             <div class="card-header">
-                <h4 class="card-title"><b>Manage Account Details/Credentials</b></h4>
+                <h4 class="card-title"><b>Manage Account Details</b></h4>
             </div>
             <div class="card-body">
                 <div class="container-fluid">
@@ -57,7 +57,7 @@ if($_settings->userdata('id') > 0 && $_settings->userdata('login_type') == 2){
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="text" name="contact" id="contact" placeholder="Enter Contact #" class="form-control form-control-sm form-control-border" required value="<?= isset($contact) ? $contact : "" ?>">
-                                <small class="ml-3">Contact #</small>
+                                <small class="ml-3">Contact Number</small>
                             </div>
                         </div>
                         <div class="row">

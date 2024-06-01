@@ -22,68 +22,48 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     }
 </style>
 <div class="container-fluid">
-
     <div class="row">
         <div class="col-md-6">
-            <fieldset class="bor">
-                <legend class="h5 text-muted">Service Provider</legend>
-                <dl>
-                    <dt class="">Registration Code</dt>
-                    <dd class="pl-4"><?= isset($body_no) ? $reg_code : "" ?></dd>
-                    <dt class="">Category</dt>
-                    <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
-                    <!-- <dt class="">Vehicle model</dt>
-                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd> -->
-                    <dt class="">Service Provider Name</dt>
-                    <dd class="pl-4"><?= isset($cab_driver) ? $cab_driver : "" ?></dd>
-                    <dt class="">Contact Number</dt>
-                    <dd class="pl-4"><?= isset($driver_contact) ? $driver_contact : "" ?></dd>
-                    <dt class="">Address</dt>
-                    <dd class="pl-4"><?= isset($driver_address) ? $driver_address : "" ?></dd>
-                </dl>
-            </fieldset>
-            <!-- <div class="clear-fix my-2"></div> -->
-            
+            <dl class="row">
+                <dt class="col-sm-12">Transaction Code</dt>
+                <dd class="col-sm-12"><?= isset($ref_code) ? $ref_code : "" ?></dd>
+                <dt class="col-sm-12">Category</dt>
+                <dd class="col-sm-12"><?= isset($category) ? $category : "" ?></dd>
+                <dt class="col-sm-12">Service</dt>
+                <dd class="col-sm-12"><?= isset($cab_model) ? $cab_model : "" ?></dd>
+            </dl>
         </div>
-
         <div class="col-md-6">
-            <fieldset class="bor">
-                <legend class="h5 text-muted"> Booking Details</legend>
-                <dl>
-                    <dt class="">Transaction Code</dt>
-                    <dd class="pl-4"><?= isset($ref_code) ? $ref_code : "" ?></dd>
-                    <dt class="">Address</dt>
-                    <dd class="pl-4"><?= isset($pickup_zone) ? $pickup_zone : "" ?></dd>
-                    <dt class="">Notes</dt>
-                    <dd class="pl-4"><?= isset($drop_zone) ? $drop_zone : "" ?></dd>
-                    <dt class="">Status</dt>
-                    <dd class="pl-4">
-                        <?php 
-                            switch($status){
-                                case 0:
-                                    echo "<span class='badge badge-secondary bg-gradient-secondary px-3 rounded-pill'>Pending</span>";
-                                    break;
-                                case 1:
-                                    echo "<span class='badge badge-primary bg-gradient-primary px-3 rounded-pill'>Confirmed</span>";
-                                    break;
-                                case 2:
-                                    echo "<span class='badge badge-warning bg-gradient-warning px-3 rounded-pill'>On-Going</span>";
-                                    break;
-                                case 3:
-                                    echo "<span class='badge badge-success bg-gradient-success px-3 rounded-pill'>Completed</span>";
-                                    break;
-                                case 4:
-                                    echo "<span class='badge badge-danger bg-gradient-danger px-3 rounded-pill'>Cancelled</span>";
-                                    break;
-                            }
-                        ?>
-                    </dd>
-                </dl>
-            </fieldset>
+            <dl class="row">
+                <dt class="col-sm-12">Address</dt>
+                <dd class="col-sm-12"><?= isset($pickup_zone) ? $pickup_zone : "" ?></dd>
+                <dt class="col-sm-12">Notes</dt>
+                <dd class="col-sm-12"><?= isset($drop_zone) ? $drop_zone : "" ?></dd>
+                <dt class="col-sm-12">Status</dt>
+                <dd class="col-sm-12">
+                    <?php 
+                        switch($status){
+                            case 0:
+                                echo "<span class='badge badge-secondary bg-gradient-secondary px-3 rounded-pill'>Pending</span>";
+                                break;
+                            case 1:
+                                echo "<span class='badge badge-primary bg-gradient-primary px-3 rounded-pill'>Confirmed</span>";
+                                break;
+                            case 2:
+                                echo "<span class='badge badge-warning bg-gradient-warning px-3 rounded-pill'>On-Going</span>";
+                                break;
+                            case 3:
+                                echo "<span class='badge badge-success bg-gradient-success px-3 rounded-pill'>Completed</span>";
+                                break;
+                            case 4:
+                                echo "<span class='badge badge-danger bg-gradient-danger px-3 rounded-pill'>Cancelled</span>";
+                                break;
+                        }
+                    ?>
+                </dd>
+            </dl>
         </div>
     </div>
-    
-    <!-- <div class="clear-fix my-3"></div> -->
     <div class="text-right">
         <?php if(isset($status) && $status == 0): ?>
         <button class="btn btn-primary btn-flat bg-gradient-primary" type="button" id="confirm_booking">Confirm Booking</button>
@@ -109,24 +89,24 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     })
     function update_booking_status($id,$status){
         start_loader();
-		$.ajax({
-			url:_base_url_+"classes/Master.php?f=update_booking_status",
-			method:"POST",
-			data:{id: $id,status:$status},
-			dataType:"json",
-			error:err=>{
-				console.log(err)
-				alert_toast("An error occured.",'error');
-				end_loader();
-			},
-			success:function(resp){
-				if(typeof resp== 'object' && resp.status == 'success'){
-					location.reload();
-				}else{
-					alert_toast("An error occured.",'error');
-					end_loader();
-				}
-			}
-		})
+        $.ajax({
+            url:_base_url_+"classes/Master.php?f=update_booking_status",
+            method:"POST",
+            data:{id: $id,status:$status},
+            dataType:"json",
+            error:err=>{
+                console.log(err)
+                alert_toast("An error occured.",'error');
+                end_loader();
+            },
+            success:function(resp){
+                if(typeof resp== 'object' && resp.status == 'success'){
+                    location.reload();
+                }else{
+                    alert_toast("An error occured.",'error');
+                    end_loader();
+                }
+            }
+        })
     }
 </script>
