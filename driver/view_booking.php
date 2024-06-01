@@ -26,19 +26,19 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     <div class="row">
         <div class="col-md-6">
             <fieldset class="bor">
-                <legend class="h5 text-muted"> Cab Details</legend>
+                <legend class="h5 text-muted">Service Provider</legend>
                 <dl>
-                    <dt class="">Cab Body No</dt>
-                    <dd class="pl-4"><?= isset($body_no) ? $body_no : "" ?></dd>
-                    <dt class="">Vehicle Category</dt>
+                    <dt class="">Registration Code</dt>
+                    <dd class="pl-4"><?= isset($body_no) ? $reg_code : "" ?></dd>
+                    <dt class="">Category</dt>
                     <dd class="pl-4"><?= isset($category) ? $category : "" ?></dd>
-                    <dt class="">Vehicle model</dt>
-                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd>
-                    <dt class="">Driver</dt>
+                    <!-- <dt class="">Vehicle model</dt>
+                    <dd class="pl-4"><?= isset($cab_model) ? $cab_model : "" ?></dd> -->
+                    <dt class="">Service Provider Name</dt>
                     <dd class="pl-4"><?= isset($cab_driver) ? $cab_driver : "" ?></dd>
-                    <dt class="">Driver Contact</dt>
+                    <dt class="">Contact Number</dt>
                     <dd class="pl-4"><?= isset($driver_contact) ? $driver_contact : "" ?></dd>
-                    <dt class="">Driver Address</dt>
+                    <dt class="">Address</dt>
                     <dd class="pl-4"><?= isset($driver_address) ? $driver_address : "" ?></dd>
                 </dl>
             </fieldset>
@@ -50,11 +50,11 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             <fieldset class="bor">
                 <legend class="h5 text-muted"> Booking Details</legend>
                 <dl>
-                    <dt class="">Ref. Code</dt>
+                    <dt class="">Transaction Code</dt>
                     <dd class="pl-4"><?= isset($ref_code) ? $ref_code : "" ?></dd>
-                    <dt class="">Pickup Zone</dt>
+                    <dt class="">Address</dt>
                     <dd class="pl-4"><?= isset($pickup_zone) ? $pickup_zone : "" ?></dd>
-                    <dt class="">Drop off Zone</dt>
+                    <dt class="">Notes</dt>
                     <dd class="pl-4"><?= isset($drop_zone) ? $drop_zone : "" ?></dd>
                     <dt class="">Status</dt>
                     <dd class="pl-4">
@@ -64,13 +64,13 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                                     echo "<span class='badge badge-secondary bg-gradient-secondary px-3 rounded-pill'>Pending</span>";
                                     break;
                                 case 1:
-                                    echo "<span class='badge badge-primary bg-gradient-primary px-3 rounded-pill'>Driver Confirmed</span>";
+                                    echo "<span class='badge badge-primary bg-gradient-primary px-3 rounded-pill'>Confirmed</span>";
                                     break;
                                 case 2:
-                                    echo "<span class='badge badge-warning bg-gradient-warning px-3 rounded-pill'>Picked-up</span>";
+                                    echo "<span class='badge badge-warning bg-gradient-warning px-3 rounded-pill'>On-Going</span>";
                                     break;
                                 case 3:
-                                    echo "<span class='badge badge-success bg-gradient-success px-3 rounded-pill'>Dropped off</span>";
+                                    echo "<span class='badge badge-success bg-gradient-success px-3 rounded-pill'>Completed</span>";
                                     break;
                                 case 4:
                                     echo "<span class='badge badge-danger bg-gradient-danger px-3 rounded-pill'>Cancelled</span>";
@@ -88,9 +88,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         <?php if(isset($status) && $status == 0): ?>
         <button class="btn btn-primary btn-flat bg-gradient-primary" type="button" id="confirm_booking">Confirm Booking</button>
         <?php elseif(isset($status) && $status == 1): ?>
-        <button class="btn btn-warning btn-flat bg-gradient-warning" type="button" id="pickup_booking">Picked Up</button>
+        <button class="btn btn-warning btn-flat bg-gradient-warning" type="button" id="pickup_booking">On-Going</button>
         <?php elseif(isset($status) && $status == 2): ?>
-        <button class="btn btn-success btn-flat bg-gradient-success" type="button" id="dropoff_booking">Dropped Off</button>
+        <button class="btn btn-success btn-flat bg-gradient-success" type="button" id="dropoff_booking">Completed</button>
         <?php endif; ?>
         <button class="btn btn-dark btn-flat bg-gradient-dark" type="button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
     </div>

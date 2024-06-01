@@ -15,7 +15,7 @@
 </style>
 <div class="card card-outline card-purple">
 	<div class="card-header">
-		<h3 class="card-title">List of System Users</h3>
+		<h3 class="card-title">System Users</h3>
 		<div class="card-tools">
 			<a href="?page=user/manage_user" class="btn btn-flat btn-success btn-sm"><span class="fas fa-plus"></span>  Add New User</a>
 		</div>

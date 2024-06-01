@@ -19,7 +19,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 <div class="content py-3">
     <div class="card card-outline rounded-0 card-purple shadow">
         <div class="card-header">
-            <h4 class="card-title">Cab Details</h4>
+            <h4 class="card-title">Service Provider</h4>
             <div class="card-tools">
                 <a class="btn btn-primary btn-sm btn-flat" href="./?page=cabs/manage_cab&id=<?= isset($id) ? $id : "" ?>"><i class="fa fa-edit"></i> Edit</a>
                 <a class="btn btn-danger btn-sm btn-flat" href="javascript:void(0)>" id="delete_data"><i class="fa fa-trash"></i> Delete</a>
@@ -34,6 +34,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                     </div>
                 </div>
                 <div class="row">
+                    <legend class="h4 text-muted"><b>Service Provider Details</b></legend>
                     <div class="col-md-6">
                         <small class="mx-2 text-muted">Registeration Code</small>
                         <div class="pl-4"><?= isset($reg_code) ? $reg_code : '' ?></div>
@@ -44,33 +45,27 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                     </div>
                 </div>
                 <fieldset>
-                    <legend class="h4 text-muted"><b>Cab Details</b></legend>
                     <div class="row">
                         <div class="col-md-6">
-                            <small class="mx-2 text-muted">Vehicle Registration No</small>
-                            <div class="pl-4"><?= isset($cab_reg_no) ? $cab_reg_no : '' ?></div>
-                        </div>
-                        <div class="col-md-6">
-                            <small class="mx-2 text-muted">Model</small>
+                            <small class="mx-2 text-muted">Services</small>
                             <div class="pl-4"><?= isset($cab_model) ? $cab_model : '' ?></div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <small class="mx-2 text-muted">Body No.</small>
+                            <small class="mx-2 text-muted">Service Code</small>
                             <div class="pl-4"><?= isset($body_no) ? $body_no : '' ?></div>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend class="h4 text-muted"><b>Driver Details</b></legend>
                     <div class="row">
                         <div class="col-md-6">
                             <small class="mx-2 text-muted">Name</small>
                             <div class="pl-4"><?= isset($cab_driver) ? $cab_driver : '' ?></div>
                         </div>
                         <div class="col-md-6">
-                            <small class="mx-2 text-muted">Contact #</small>
+                            <small class="mx-2 text-muted">Contact Number</small>
                             <div class="pl-4"><?= isset($driver_contact) ? $driver_contact : '' ?></div>
                         </div>
                     </div>

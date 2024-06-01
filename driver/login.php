@@ -33,7 +33,7 @@
   <div class="clear-fix my-2"></div>
   <div class="card card-outline card-purple">
     <div class="card-header text-center">
-      <a href="./" class="h4 text-decoration-none"><b>Driver Login Panel</b></a>
+      <a href="./" class="h4 text-decoration-none"><b>Service Provider Login Panel</b></a>
     </div>
     <div class="card-body">
       
@@ -67,12 +67,6 @@
           <!-- /.col -->
         </div>
       </form>
-      <!-- /.social-auth-links -->
-
-      <!-- <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p> -->
-      
     </div>
     <!-- /.card-body -->
   </div>

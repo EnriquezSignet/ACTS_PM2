@@ -28,7 +28,7 @@
 						<th class="text-center">#</th>
 						<th class="text-center">Reg. Code</th>
 						<th class="text-center">Category</th>
-						<th class="text-center">Model</th>
+						<th class="text-center">Services</th>
 						<th class="text-center">Details</th>
 						<th class="text-center">Status</th>
 						<th class="text-center">Action</th>
@@ -51,8 +51,8 @@
 							<td><?php echo ucwords($row['cab_model'])?></td>
 							<td>
 								<div>
-									<p class="m-0 truncate-1"><small><b>Plate:</b> <?= $row['cab_reg_no'] ?></small></p>
-									<p class="m-0 truncate-1"><small><b>Driver:</b> <?= $row['cab_driver'] ?></small></p>
+									<p class="m-0 truncate-1"><small><b>Name:</b> <?= $row['cab_driver'] ?></small></p>
+									<p class="m-0 truncate-1"><small><b>Home Address:</b> <?= $row['driver_address'] ?></small></p>
 								</div>
 							</td>
 							<td class="text-center">

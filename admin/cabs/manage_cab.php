@@ -36,41 +36,41 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </select>
 			</div>
 			<div class="form-group">
-				<label for="cab_reg_no" class="control-label">Plate #/Vehicle Reg #</label>
+				<label for="cab_reg_no" class="control-label">Registration Code</label>
                 <input name="cab_reg_no" id="cab_reg_no" type="text" class="form-control rounded-0" value="<?php echo isset($cab_reg_no) ? $cab_reg_no : ''; ?>" required>
 			</div>
 			<div class="form-group">
-				<label for="cab_model" class="control-label">Vehicle Model</label>
+				<label for="cab_model" class="control-label">Services</label>
                 <input name="cab_model" id="cab_model" type="text" class="form-control rounded-0" value="<?php echo isset($cab_model) ? $cab_model : ''; ?>" required>
 			</div>
 			<div class="form-group">
-				<label for="body_no" class="control-label">Cab's Body #</label>
+				<label for="body_no" class="control-label">Services Code</label>
                 <input name="body_no" id="body_no" type="text" class="form-control rounded-0" value="<?php echo isset($body_no) ? $body_no : ''; ?>" required>
 			</div>
             <div class="form-group">
-				<label for="cab_driver" class="control-label">Driver Name</label>
+				<label for="cab_driver" class="control-label">Name</label>
                 <input name="cab_driver" id="cab_driver" type="text" class="form-control rounded-0" value="<?php echo isset($cab_driver) ? $cab_driver : ''; ?>" required>
 			</div>
 			<div class="form-group">
-				<label for="driver_contact" class="control-label">Driver's Contact #</label>
+				<label for="driver_contact" class="control-label">Contact Number</label>
                 <input name="driver_contact" id="driver_contact" type="text" class="form-control rounded-0" value="<?php echo isset($driver_contact) ? $driver_contact : ''; ?>" required>
 			</div>
 			<div class="form-group">
-				<label for="driver_address" class="control-label">Driver's Address</label>
+				<label for="driver_address" class="control-label">Home Address</label>
                 <textarea name="driver_address" id="driver_address" type="text" class="form-control rounded-0" required><?php echo isset($driver_address) ? $driver_address : ''; ?></textarea>
 			</div>
 			<div class="form-group">
-				<label for="password" class="control-label">Driver's Account Password</label>
+				<label for="password" class="control-label">Account Password</label>
 				<div class="input-group">
                 	<input name="password" id="password" type="password" class="form-control rounded-0" <?php echo !isset($password) ? 'required' : ''; ?>>
 					<div class="input-group-append">
 						<button class="btn btn-outline-default pass_view" type="button"><i class="fa fa-eye-slash"></i></button>
 					</div>
 				</div>
-				<small class="text-muted"><i>Leave this field blank if you don't wish to update the driver's account password.</i></small>
+				<small class="text-muted"><i>Leave this field blank if you don't wish to update the account password.</i></small>
 			</div>
 			<div class="form-group col-md-6">
-				<label for="" class="control-label">Driver's Image</label>
+				<label for="" class="control-label">Image</label>
 				<div class="custom-file">
 	              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">
 	              <label class="custom-file-label" for="customFile">Choose file</label>
