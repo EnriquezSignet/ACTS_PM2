@@ -15,17 +15,23 @@
           background-size:cover;  
       }
       #logo-img{
-          /* width:15em;
-          height:15em; */
+          background-color: rgba(255, 255, 255, 0.5);
+          width:15em;
+          height:15em;
           object-fit:scale-down;
           object-position: center center;
+      }
+      .custom-card {
+          border-top: 8px solid brown; 
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
   </style>
 <div class="login-box">
 <center><img src="<?= validate_image($_settings->info('logo')) ?>" alt="System Logo" class="img-thumbnail rounded-circle" id="logo-img"></center>
   <div class="clear-fix my-2"></div>
   <!-- /.login-logo -->
-  <div class="card card-outline card-purple">
+  <div class="card card-outline custom-card">
     <div class="card-header text-center">
       <a href="./" class="h4"><b>Admin Login</b></a>
     </div>

@@ -8,17 +8,24 @@
   </script>
   <style>
       body{
-          /* width:calc(100%);
+          /*width:calc(100%);
           height:calc(100%);
           background-image:url('<?= validate_image($_settings->info('cover')) ?>');
           background-repeat: no-repeat;
-          background-size:cover; */
+          background-size:cover;*/
       }
       #logo-img{
-          /* width:15em;
-          height:15em; */
+          background-color: transparent;
+          border-radius: 80%;
+          width:15em;
+          height:15em;
           object-fit:scale-down;
           object-position:center center;
+      }
+      .custom-card {
+          border-top: 8px solid brown; 
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
   </style>
 <div class="login-box">
@@ -32,7 +39,7 @@
   <!-- /.login-logo -->
   <center><img src="<?= validate_image($_settings->info('logo')) ?>" alt="System Logo" id="logo-img"></center>
   <div class="clear-fix my-2"></div>
-  <div class="card card-outline card-purple">
+  <div class="card card-outline custom-card">
     <div class="card-header text-center">
       <a href="./" class="h4 text-decoration-none"><b>Client Login Panel</b></a>
     </div>

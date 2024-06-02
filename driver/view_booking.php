@@ -81,10 +81,10 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
             _conf("Are you sure to confirm this booking [Ref. Code: <b><?= isset($ref_code) ? $ref_code : "" ?></b>]?", "update_booking_status",["<?= isset($id) ? $id : "" ?>",1])
         })
         $('#pickup_booking').click(function(){
-            _conf("Mark [Ref. Code: <b><?= isset($ref_code) ? $ref_code : "" ?></b>] booking as Picked Up?", "update_booking_status",["<?= isset($id) ? $id : "" ?>",2])
+            _conf("Mark [Ref. Code: <b><?= isset($ref_code) ? $ref_code : "" ?></b>] booking as On-Going?", "update_booking_status",["<?= isset($id) ? $id : "" ?>",2])
         }) 
         $('#dropoff_booking').click(function(){
-            _conf("Mark [Ref. Code: <b><?= isset($ref_code) ? $ref_code : "" ?></b>] booking as Dropped Off?", "update_booking_status",["<?= isset($id) ? $id : "" ?>",3])
+            _conf("Mark [Ref. Code: <b><?= isset($ref_code) ? $ref_code : "" ?></b>] booking as Completed?", "update_booking_status",["<?= isset($id) ? $id : "" ?>",3])
         })
     })
     function update_booking_status($id,$status){

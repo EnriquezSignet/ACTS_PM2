@@ -1,4 +1,4 @@
-<h1 class=""><i class="fas fa-taxi"></i> <?php echo $_settings->info('name') ?></h1>
+<h1 class=""><i class="fas"></i> <?php echo $_settings->info('name') ?></h1>
 <hr>
 <style>
   #cover_img_dash{
@@ -11,7 +11,7 @@
 <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
-              <span class="info-box-icon bg-gradient-purple elevation-1"><i class="fas fa-copyright"></i></span>
+              <span class="info-box-icon bg-gradient-purple elevation-1"><i class="fas fa-list"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Categories</span>
@@ -30,7 +30,7 @@
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
-              <span class="info-box-icon bg-gradient-warning elevation-1"><i class="fas fa-taxi"></i></span>
+              <span class="info-box-icon bg-gradient-warning elevation-1"><i class="fas fa-tasks"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Available Services</span>
@@ -150,7 +150,7 @@
 
           <div class="col-12 col-sm-6 col-md-3">
             <div class="shadow info-box mb-3">
-              <span class="info-box-icon bg-gradient-green elevation-1"><i class="fas fa-tasks"></i></span>
+              <span class="info-box-icon bg-gradient-green elevation-1"><i class="fas fa-check-circle"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Completed Bookings</span>

@@ -1,5 +1,19 @@
- <!-- Header-->
- <header class="bg-dark py-5" id="main-header">
+<!-- Header-->
+<style>
+    #main-header {
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        height: 100vh; 
+    }
+    @media (max-width: 768px) {
+        #main-header {
+            height: 50vh; 
+        }
+    }
+</style>
+
+<header class="bg-dark py-5" id="main-header">
     <div class="container h-100 d-flex align-items-center justify-content-center w-100">
         <div class="text-center text-white w-100">
             <h1 class="display-4 fw-bolder mx-5"><?php echo $_settings->info('name') ?></h1>
